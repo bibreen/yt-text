@@ -39,3 +39,14 @@ uv run get-transcript --help
 - yt-dlp
 - requests
 - click
+
+## 주의사항
+
+### IP 차단 문제 (RequestBlocked 또는 IpBlocked 예외)
+
+유튜브는 클라우드 제공업체(AWS, Google Cloud Platform, Azure 등)의 알려진 IP를 차단하기 시작했습니다. 따라서 클라우드 솔루션에 코드를 배포할 때 RequestBlocked 또는 IpBlocked 예외가 발생할 가능성이 높습니다. 자체 호스팅 솔루션에서도 너무 많은 요청을 하면 같은 문제가 발생할 수 있습니다.
+
+**권장사항:**
+- 로컬 환경에서 개인적인 용도로 사용
+- 로컬 환경에서도 너무 많은 요청 시 IP 차단 가능성 있음
+- 클라우드 배포 시 IP 차단 가능성 인지
