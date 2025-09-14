@@ -1,0 +1,17 @@
+[project]
+name = "yt-text"
+version = "0.1.0"
+description = "YouTube transcript downloader"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "yt-dlp",
+    "requests",
+    "click",
+]
+
+[project.scripts]
+get-transcript = "yt_text.main:cli"
+
+[tool.uv]
+package = true
